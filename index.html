@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memel vs Lulu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="overlay" class="overlay">
+        <div class="window-container notification-window">
+            <div class="window-header">
+                <span class="window-title">SISTEMA_AVISO.SYS</span>
+            </div>
+            <div class="window-body">
+                <p id="notif-text">DESEJA INICIAR O JOGO DA VELHA?</p>
+                <div class="notification-buttons">
+                    <button id="btn-sim" class="retro-btn">SIM</button>
+                    <button id="btn-nao" class="retro-btn">NÃO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="desktop">
+        
+        <div class="desktop-icons">
+            <div class="icon">
+                <img src="pasta.png" alt="Pasta">
+                <span>GATINHOS_FOFINHOS</span>
+            </div>
+            <div class="icon">
+                <img src="lixeira.png" alt="Lixeira">
+                <span>LIXEIRA</span>
+            </div>
+            <div class="icon">
+                <img src="internet.png" alt="Net">
+                <span>BROWSER</span>
+            </div>
+        </div>
+
+        <div class="main-layout">
+            <div class="window-container" id="gameWindow">
+                <div class="window-header">
+                    <span class="window-title">JOGO_DA_VELHA.EXE</span>
+                    <div class="window-controls">
+                        <button class="control-btn">_</button>
+                        <button class="control-btn" id="close-button">X</button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <h2 id="winningMessage">VEZ DE LUNA</h2>
+                    <div class="board" id="board">
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                    </div>
+                    <button id="restartButton" class="retro-btn">JOGAR NOVAMENTE</button>
+                </div>
+            </div>
+
+            <div class="side-windows">
+                <div class="window-container mini-window" id="scoreLuna">
+                    <div class="window-header"><span class="window-title">LUNA (X)</span></div>
+                    <div class="window-body">
+                        <span id="xScore" class="pixel-text">0</span>
+                    </div>
+                </div>
+                <div class="window-container mini-window" id="scoreSol">
+                    <div class="window-header"><span class="window-title">MEGGIE (O)</span></div>
+                    <div class="window-body">
+                        <span id="oScore" class="pixel-text">0</span>
+                    </div>
+                </div>
+                <div class="window-container mini-window" id="resetWindow">
+                    <div class="window-header"><span class="window-title">SISTEMA.EXE</span></div>
+                    <div class="window-body">
+                        <p style="font-size: 0.8rem; margin-bottom: 5px;">ZERAR PLACAR?</p>
+                        <button id="resetScoreButton" class="retro-btn" style="width: 100%; color: #800000;">SIM</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="taskbar">
+            <button class="start-button">
+                <img src="logo_pixel.png" width="16"> Iniciar
+            </button>
+            <div class="taskbar-divider"></div>
+            <div class="task-item">lele.EXE</div>
+            <div class="system-tray">
+                <span id="clock">00:00</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
