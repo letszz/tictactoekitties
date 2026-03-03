@@ -20,7 +20,7 @@ const WINNING_COMBINATIONS = [
     [0, 4, 8], [2, 4, 6]
 ];
 
-// SONS 8-BIT
+// sons do site
 function playEightBitSound(type = 'click') {
     const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     function createNote(freq, startTime, duration, vol) {
@@ -42,7 +42,7 @@ function playEightBitSound(type = 'click') {
     }
 }
 
-// INICIALIZAÇÃO
+// iniciar
 btnSim.addEventListener('click', () => {
     playEightBitSound('click');
     overlay.style.display = 'none';
@@ -61,7 +61,7 @@ closeButton.addEventListener('click', () => {
     }, 400);
 });
 
-// LÓGICA DO JOGO
+// fazer jogo funcionar
 function startGame() {
     if (lastWinner === 'O') isCircleTurn = true;
     else isCircleTurn = false;
@@ -136,7 +136,7 @@ function endGame(draw, winCombo) {
     }
 }
 
-// UTILITÁRIOS
+// outras coisas
 function triggerJump(el) {
     el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump');
     setTimeout(() => el.classList.remove('bump'), 500);
